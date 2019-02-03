@@ -69,6 +69,7 @@
             this.opcionesClasificacion.Name = "opcionesClasificacion";
             this.opcionesClasificacion.Size = new System.Drawing.Size(258, 21);
             this.opcionesClasificacion.TabIndex = 1;
+            this.opcionesClasificacion.SelectedIndexChanged += new System.EventHandler(this.opcionesClasificacion_SelectedIndexChanged);
             // 
             // labelMapa
             // 
@@ -105,7 +106,7 @@
             this.gMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMap.ShowTileGridLines = false;
-            this.gMap.Size = new System.Drawing.Size(561, 277);
+            this.gMap.Size = new System.Drawing.Size(528, 277);
             this.gMap.TabIndex = 3;
             this.gMap.Zoom = 14D;
             this.gMap.Load += new System.EventHandler(this.gMapControl1_Load);
@@ -137,8 +138,10 @@
             this.shopsData.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.shopsData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.shopsData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.shopsData.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.shopsData.Location = new System.Drawing.Point(341, 37);
             this.shopsData.Name = "shopsData";
+            this.shopsData.ShowEditingIcon = false;
             this.shopsData.Size = new System.Drawing.Size(545, 239);
             this.shopsData.TabIndex = 6;
             // 

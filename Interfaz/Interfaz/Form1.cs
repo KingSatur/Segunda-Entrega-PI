@@ -12,27 +12,29 @@ using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using model;
 
 
 namespace Interfaz
 {
     public partial class Form1 : Form
     {
-
+        private TunjaC tunjaShops;
         private GMarkerGoogle marker;
         private GMapOverlay markerOverlay;
-        private DataTable dt;
-        private int rowSeleccionated;
+        private DataTable table;
+
 
         public Form1()
         {
             InitializeComponent();
-            loadTable();
+            tunjaShops = new TunjaC();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void labelSeleccion_Click(object sender, EventArgs e)
@@ -67,36 +69,95 @@ namespace Interfaz
 
         private void shopsData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataTable table = new DataTable();
-
-            table.Columns.Add("Razon Social", typeof(String));
-            table.Columns.Add("Direccion", typeof(String));
-            table.Columns.Add("Tipo de tienda", typeof(String));
-            table.Columns.Add("Latitud", typeof(double));
-            table.Columns.Add("Longitud", typeof(double));
-
-            table.Rows.Add("Juan", "Calle hola", "Super", 123123,12312312);
-
-            shopsData.DataSource = table;
-
+    
         }
 
-        private void loadTable()
+        private void createBasicTable()
         {
-            DataTable table = new DataTable();
+            table = new DataTable();
 
             table.Columns.Add("Razon Social", typeof(String));
             table.Columns.Add("Direccion", typeof(String));
             table.Columns.Add("Tipo de tienda", typeof(String));
             table.Columns.Add("Latitud", typeof(double));
             table.Columns.Add("Longitud", typeof(double));
-
-            table.Rows.Add("Juan", "Calle hola", "Super", 123123, 12312312);
-
             shopsData.DataSource = table;
 
         }
 
+        private void opcionesClasificacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String opcion = opcionesClasificacion.Items[opcionesClasificacion.SelectedIndex].ToString();
 
+            if (opcion.Equals("Autoservicio"))
+            {
+                createBasicTable();
+                foreach (var shop in tunjaShops.AutoServices.Keys)
+                {
+                    var businessName = tunjaShops.AutoServices[shop].BusinessName;
+                    var adress = tunjaShops.AutoServices[shop].Adress;
+                    var subject = tunjaShops.AutoServices[shop].Subject;
+                    table.Rows.Add(businessName, adress, subject);
+                }
+            }
+            else if (opcion.Equals("Supermercado"))
+            {
+                createBasicTable();
+                foreach (var shop in tunjaShops.SuperMarkets.Keys)
+                {
+                    var businessName = tunjaShops.SuperMarkets[shop].BusinessName;
+                    var adress = tunjaShops.SuperMarkets[shop].Adress;
+                    var subject = tunjaShops.SuperMarkets[shop].Subject;
+                    table.Rows.Add(businessName, adress, subject);
+                }
+
+            }
+            else if(opcion.Equals("Grandes Superficies"))
+            {
+                createBasicTable();
+                foreach (var shop in tunjaShops.BigSurfaces.Keys)
+                {
+                    var businessName = tunjaShops.BigSurfaces[shop].BusinessName;
+                    var adress = tunjaShops.BigSurfaces[shop].Adress;
+                    var subject = tunjaShops.BigSurfaces[shop].Subject;
+                    table.Rows.Add(businessName, adress, subject);
+                }
+            }
+            else if(opcion.Equals("Cenco Sud"))
+            {
+                createBasicTable();
+                foreach (var shop in tunjaShops.CencoSud.Keys)
+                {
+                    var businessName = tunjaShops.CencoSud[shop].BusinessName;
+                    var adress = tunjaShops.CencoSud[shop].Adress;
+                    var subject = tunjaShops.CencoSud[shop].Subject;
+                    table.Rows.Add(businessName, adress, subject);
+                }
+            }
+            else if (opcion.Equals("Minimercado"))
+            {
+                createBasicTable();
+                foreach (var shop in tunjaShops.MiniMarkets.Keys)
+                {
+                    var businessName = tunjaShops.MiniMarkets[shop].BusinessName;
+                    var adress = tunjaShops.MiniMarkets[shop].Adress;
+                    var subject = tunjaShops.MiniMarkets[shop].Subject;
+                    table.Rows.Add(businessName, adress, subject);
+                }
+            }
+            else if (opcion.Equals("Almacenes"))
+            {
+                createBasicTable();
+                foreach (var shop in tunjaShops.WareHouses.Keys)
+                {
+                    var businessName = tunjaShops.WareHouses[shop].BusinessName;
+                    var adress = tunjaShops.WareHouses[shop].Adress;
+                    var subject = tunjaShops.WareHouses[shop].Subject;
+                    table.Rows.Add(businessName, adress, subject);
+                }
+            }
+
+
+        }
     }
 }

@@ -28,6 +28,79 @@ namespace model
             loadData();
         }
 
+        public Dictionary<String, Shop> SuperMarkets
+        {
+            get
+            {
+                return superMarkets;
+            }
+            set
+            {
+                superMarkets = value;
+            }
+        }
+
+        public Dictionary<String, Shop> CencoSud
+        {
+            get
+            {
+                return cencoSud;
+            }
+            set
+            {
+                cencoSud = value;
+            }
+        }
+
+        public Dictionary<String, Shop> AutoServices
+        {
+            get
+            {
+                return autoServices;
+            }
+            set
+            {
+                autoServices = value;
+            }
+        }
+
+        public Dictionary<String, Shop> BigSurfaces
+        {
+            get
+            {
+                return bigSurfaces;
+            }
+            set
+            {
+                bigSurfaces = value;
+            }
+        }
+
+        public Dictionary<String, Shop> WareHouses
+        {
+            get
+            {
+                return wareHouses;
+            }
+            set
+            {
+                wareHouses = value;
+            }
+        }
+
+        public Dictionary<String, Shop> MiniMarkets
+        {
+            get
+            {
+                return miniMarket ;
+            }
+            set
+            {
+                miniMarket = value;
+            }
+        }
+
+
         public void loadData()
         {
             String[] allShopsInformation = File.ReadAllLines("./Supermarkets.csv");

@@ -73,3 +73,6 @@ C:\Users\Juan David\Source\Repos\Segunda-Entrega-PI\Interfaz\Interfaz\obj\Debug\
 C:\Users\Juan David\Source\Repos\Segunda-Entrega-PI\Interfaz\Interfaz\obj\Debug\Interfaz.csproj.CopyComplete
 C:\Users\Juan David\Source\Repos\Segunda-Entrega-PI\Interfaz\Interfaz\obj\Debug\Interfaz.exe
 C:\Users\Juan David\Source\Repos\Segunda-Entrega-PI\Interfaz\Interfaz\obj\Debug\Interfaz.pdb
+C:\Users\Juan David\Source\Repos\Segunda-Entrega-PI\Interfaz\Interfaz\bin\Debug\model.exe
+C:\Users\Juan David\Source\Repos\Segunda-Entrega-PI\Interfaz\Interfaz\bin\Debug\model.pdb
+C:\Users\Juan David\Source\Repos\Segunda-Entrega-PI\Interfaz\Interfaz\bin\Debug\model.exe.config
