@@ -1,6 +1,0 @@
-﻿1>------ Operación Compilar iniciada: proyecto: Interfaz, configuración: Debug Any CPU ------
-1>C:\Users\Juan David\Source\Repos\Segunda-Entrega-PI\Interfaz\Interfaz\Form1.cs(11,7,11,15): warning CS0105: La directiva using para 'GMap.NET' aparece previamente en este espacio de nombres
-1>C:\Users\Juan David\Source\Repos\Segunda-Entrega-PI\Interfaz\Interfaz\Form1.cs(25,21,25,37): warning CS0169: El campo 'Form1.rowSeleccionated' nunca se usa
-1>C:\Users\Juan David\Source\Repos\Segunda-Entrega-PI\Interfaz\Interfaz\Form1.cs(24,27,24,29): warning CS0169: El campo 'Form1.dt' nunca se usa
-1>  Interfaz -> C:\Users\Juan David\Source\Repos\Segunda-Entrega-PI\Interfaz\Interfaz\bin\Debug\Interfaz.exe
-========== Compilar: 1 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========
