@@ -57,6 +57,7 @@
             // opcionesClasificacion
             // 
             this.opcionesClasificacion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.opcionesClasificacion.ForeColor = System.Drawing.Color.Black;
             this.opcionesClasificacion.FormattingEnabled = true;
             this.opcionesClasificacion.Items.AddRange(new object[] {
             "Autoservicio",
@@ -92,7 +93,7 @@
             this.gMap.GrayScaleMode = false;
             this.gMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMap.LevelsKeepInMemmory = 5;
-            this.gMap.Location = new System.Drawing.Point(358, 333);
+            this.gMap.Location = new System.Drawing.Point(418, 333);
             this.gMap.MarkersEnabled = true;
             this.gMap.MaxZoom = 20;
             this.gMap.MinZoom = 5;
@@ -106,7 +107,7 @@
             this.gMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMap.ShowTileGridLines = false;
-            this.gMap.Size = new System.Drawing.Size(528, 277);
+            this.gMap.Size = new System.Drawing.Size(421, 277);
             this.gMap.TabIndex = 3;
             this.gMap.Zoom = 14D;
             this.gMap.Load += new System.EventHandler(this.gMapControl1_Load);
@@ -139,10 +140,10 @@
             this.shopsData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.shopsData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.shopsData.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.shopsData.Location = new System.Drawing.Point(341, 37);
+            this.shopsData.Location = new System.Drawing.Point(418, 37);
             this.shopsData.Name = "shopsData";
             this.shopsData.ShowEditingIcon = false;
-            this.shopsData.Size = new System.Drawing.Size(545, 239);
+            this.shopsData.Size = new System.Drawing.Size(421, 239);
             this.shopsData.TabIndex = 6;
             // 
             // Form1

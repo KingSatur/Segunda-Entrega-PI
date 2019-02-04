@@ -21,6 +21,7 @@ namespace Interfaz
     {
         private TunjaC tunjaShops;
         private GMarkerGoogle marker;
+        private GMarkerGoogle marker2;
         private GMapOverlay markerOverlay;
         private DataTable table;
 
@@ -52,19 +53,6 @@ namespace Interfaz
             gMap.MaxZoom = 100;
             gMap.Zoom = 14;
             gMap.AutoScroll = true;
-
-            //Marcador
-            markerOverlay = new GMapOverlay("Marker");
-            marker = new GMarkerGoogle(new PointLatLng(5.5158168, -73.377732), GMarkerGoogleType.green);
-            //Agregamos al mapa
-            markerOverlay.Markers.Add(marker);
-
-            //Agregamos un tooltop de texto a los marcadores
-            marker.ToolTipMode = MarkerTooltipMode.Always;
-            marker.ToolTipText = string.Format("Ubicacion: \n latitud");
-
-            //hora agregamos el mapa y el marcador al map control
-            gMap.Overlays.Add(markerOverlay);
         }
 
         private void shopsData_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -79,8 +67,6 @@ namespace Interfaz
             table.Columns.Add("Razon Social", typeof(String));
             table.Columns.Add("Direccion", typeof(String));
             table.Columns.Add("Tipo de tienda", typeof(String));
-            table.Columns.Add("Latitud", typeof(double));
-            table.Columns.Add("Longitud", typeof(double));
             shopsData.DataSource = table;
 
         }
@@ -92,6 +78,21 @@ namespace Interfaz
             if (opcion.Equals("Autoservicio"))
             {
                 createBasicTable();
+                markerOverlay = new GMapOverlay("Marker");
+                marker = new GMarkerGoogle(new PointLatLng(5.5158168, -73.377732), GMarkerGoogleType.green);
+                marker2 = new GMarkerGoogle(new PointLatLng(5.5152168, -73.373732), GMarkerGoogleType.green);
+
+                markerOverlay.Markers.Add(marker);
+                markerOverlay.Markers.Add(marker2);
+
+                //Agregamos un tooltop de texto a los marcadores
+                marker.ToolTipMode = MarkerTooltipMode.Always;
+                marker.ToolTipText = string.Format("Ubicacion: \n latitud");
+                marker2.ToolTipMode = MarkerTooltipMode.Always;
+                marker2.ToolTipText = string.Format("Ubicacion: \n latitud");
+
+                //hora agregamos el mapa y el marcador al map control
+                gMap.Overlays.Add(markerOverlay);
                 foreach (var shop in tunjaShops.AutoServices.Keys)
                 {
                     var businessName = tunjaShops.AutoServices[shop].BusinessName;
@@ -103,6 +104,20 @@ namespace Interfaz
             else if (opcion.Equals("Supermercado"))
             {
                 createBasicTable();
+                markerOverlay = new GMapOverlay("Marker");
+                marker = new GMarkerGoogle(new PointLatLng(5.5158168, -73.377732), GMarkerGoogleType.green);
+                marker2 = new GMarkerGoogle(new PointLatLng(5.5152168, -73.373732), GMarkerGoogleType.green);
+                markerOverlay.Markers.Add(marker);
+                markerOverlay.Markers.Add(marker2);
+
+                //Agregamos un tooltop de texto a los marcadores
+                marker.ToolTipMode = MarkerTooltipMode.Always;
+                marker.ToolTipText = string.Format("Ubicacion: \n latitud");
+                marker2.ToolTipMode = MarkerTooltipMode.Always;
+                marker2.ToolTipText = string.Format("Ubicacion: \n latitud");
+
+                //hora agregamos el mapa y el marcador al map control
+                gMap.Overlays.Add(markerOverlay);
                 foreach (var shop in tunjaShops.SuperMarkets.Keys)
                 {
                     var businessName = tunjaShops.SuperMarkets[shop].BusinessName;
@@ -115,6 +130,21 @@ namespace Interfaz
             else if(opcion.Equals("Grandes Superficies"))
             {
                 createBasicTable();
+                markerOverlay = new GMapOverlay("Marker");
+                marker = new GMarkerGoogle(new PointLatLng(5.5158168, -73.377732), GMarkerGoogleType.green);
+                marker2 = new GMarkerGoogle(new PointLatLng(5.5152168, -73.373732), GMarkerGoogleType.green);
+
+                markerOverlay.Markers.Add(marker);
+                markerOverlay.Markers.Add(marker2);
+
+                //Agregamos un tooltop de texto a los marcadores
+                marker.ToolTipMode = MarkerTooltipMode.Always;
+                marker.ToolTipText = string.Format("Ubicacion: \n latitud");
+                marker2.ToolTipMode = MarkerTooltipMode.Always;
+                marker2.ToolTipText = string.Format("Ubicacion: \n latitud");
+
+                //hora agregamos el mapa y el marcador al map control
+                gMap.Overlays.Add(markerOverlay);
                 foreach (var shop in tunjaShops.BigSurfaces.Keys)
                 {
                     var businessName = tunjaShops.BigSurfaces[shop].BusinessName;
@@ -126,6 +156,21 @@ namespace Interfaz
             else if(opcion.Equals("Cenco Sud"))
             {
                 createBasicTable();
+                markerOverlay = new GMapOverlay("Marker");
+                marker = new GMarkerGoogle(new PointLatLng(5.5158168, -73.377732), GMarkerGoogleType.green);
+                marker2 = new GMarkerGoogle(new PointLatLng(5.5152168, -73.373732), GMarkerGoogleType.green);
+
+                markerOverlay.Markers.Add(marker);
+                markerOverlay.Markers.Add(marker2);
+
+                //Agregamos un tooltop de texto a los marcadores
+                marker.ToolTipMode = MarkerTooltipMode.Always;
+                marker.ToolTipText = string.Format("Ubicacion: \n latitud");
+                marker2.ToolTipMode = MarkerTooltipMode.Always;
+                marker2.ToolTipText = string.Format("Ubicacion: \n latitud");
+
+                //hora agregamos el mapa y el marcador al map control
+                gMap.Overlays.Add(markerOverlay);
                 foreach (var shop in tunjaShops.CencoSud.Keys)
                 {
                     var businessName = tunjaShops.CencoSud[shop].BusinessName;
@@ -137,6 +182,21 @@ namespace Interfaz
             else if (opcion.Equals("Minimercado"))
             {
                 createBasicTable();
+                markerOverlay = new GMapOverlay("Marker");
+                marker = new GMarkerGoogle(new PointLatLng(5.5158168, -73.377732), GMarkerGoogleType.green);
+                marker2 = new GMarkerGoogle(new PointLatLng(5.5152168, -73.373732), GMarkerGoogleType.green);
+
+                markerOverlay.Markers.Add(marker);
+                markerOverlay.Markers.Add(marker2);
+
+                //Agregamos un tooltop de texto a los marcadores
+                marker.ToolTipMode = MarkerTooltipMode.Always;
+                marker.ToolTipText = string.Format("Ubicacion: \n latitud");
+                marker2.ToolTipMode = MarkerTooltipMode.Always;
+                marker2.ToolTipText = string.Format("Ubicacion: \n latitud");
+
+                //hora agregamos el mapa y el marcador al map control
+                gMap.Overlays.Add(markerOverlay);
                 foreach (var shop in tunjaShops.MiniMarkets.Keys)
                 {
                     var businessName = tunjaShops.MiniMarkets[shop].BusinessName;
@@ -148,6 +208,21 @@ namespace Interfaz
             else if (opcion.Equals("Almacenes"))
             {
                 createBasicTable();
+                markerOverlay = new GMapOverlay("Marker");
+                marker = new GMarkerGoogle(new PointLatLng(5.5158168, -73.377732), GMarkerGoogleType.green);
+                marker2 = new GMarkerGoogle(new PointLatLng(5.5152168, -73.373732), GMarkerGoogleType.green);
+
+                markerOverlay.Markers.Add(marker);
+                markerOverlay.Markers.Add(marker2);
+
+                //Agregamos un tooltop de texto a los marcadores
+                marker.ToolTipMode = MarkerTooltipMode.Always;
+                marker.ToolTipText = string.Format("Ubicacion: \n latitud");
+                marker2.ToolTipMode = MarkerTooltipMode.Always;
+                marker2.ToolTipText = string.Format("Ubicacion: \n latitud");
+
+                //hora agregamos el mapa y el marcador al map control
+                gMap.Overlays.Add(markerOverlay);
                 foreach (var shop in tunjaShops.WareHouses.Keys)
                 {
                     var businessName = tunjaShops.WareHouses[shop].BusinessName;
